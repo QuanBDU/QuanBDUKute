@@ -1,0 +1,99 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!-- head - Googlefonts link -->
+<link rel="stylesheet" href="Survey_new.css">
+<div id="outside">
+<form id="survey-form" action="/my-handling-form-page" method="post">
+  <h1 id="title">Đơn xin phép hẹn hò với con gái tôi</h1>
+  <p id="description"><b>Chú ý nha:</b> Biểu mẫu phải được hoàn thành trước ít nhất 21 ngày ^^!</p>
+  
+  <!-- ------------------Personal Details---------------------------- -->
+  <fieldset>
+    <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+    <legend>Thông tin cá nhân</legend>
+    <!-- formally describes the purpose of the fieldset it is included inside. -->
+    <div>
+      <label id="name-label" for="name">Họ và tên:</label>
+      <input type="text" required id="name" name="user_name" placeholder="Nhập tên vào đây">   </div>
+    <div>
+      <label for="address-label">Địa chỉ:</label>
+      <input type="Address" id="address" name="Address" placeholder="Nhập địa chỉ vào đây">   </div>
+    <div>
+      <label id="email-label" for="Email">Email:</label>
+      <input type="email" required id="email" name="user_email" placeholder="Nhập email vào đây">   </div>
+    <div>
+      <label id="number-label" for="phone">Số điện thoại:</label>
+      <input type="number" id="number" name="user_name" placeholder="Nhập 10 chữ số" min="1" max="9">  </div>
+    <div>
+      <label id="iq-label" for="iq">IQ:</label>
+      <input type="number" id="iq" name="iq" placeholder="Nhập IQ vào đây">   </div>
+
+    <!-- ------------------Radio Buttons-------------------------------- -->
+    <div>
+      <label for="Gender">Giới tính</label>
+      <p>
+        <input type="radio" name="gender" value="male" checked> Nam<br>
+        <input type="radio" name="gender" value="female"> Nữ<br>
+        <input type="radio" name="gender" value="other"> Khác^^
+      </p>
+    </div>
+    <label for="date-label">Ngày Đi chơi Đề xuất:</label>
+    <input type="date" name="bday">
+  
+  </fieldset>
+  <!-- ------------------Checkboxes-------------------------------- -->
+  <fieldset>
+    <label for="Gender">Chọn tất cả những gì áp dụng</label>
+    <p>
+      <input type="checkbox" name="tattoo" value="tattoo"> Tôi có hình xăm hoặc đeo khuyên<br>
+      <input type="checkbox" name="age" value="Car"> Tôi hơn con gái tôi 2 tuổi<br>
+      <input type="checkbox" name="car" value="car"> Tôi sở hữu một chiếc xe van hoặc động cơ V8.<br>
+      <input type="checkbox" name="work" value="work" checked> Tôi làm việc toàn thời gian<br>
+      <input type="checkbox" name="rich" value="rich" checked> Cha mẹ tôi rất giàu<br>
+      <input type="checkbox" name="loc" value="loc" checked> Ngày ở địa điểm công cộng đủ ánh sáng chưa<br>
+    </p>
+  </fieldset>
+  
+  <!-- -----------------Dropdown menus--------------------------------- -->
+  
+  <fieldset>
+    <div>
+      <label for="politics">Thuyết phục Chính trị:</label>
+      <select id="dropdown">
+  <option value="left">Cánh trái</option>
+  <option value="right">Cánh phải</option>
+  <option value="conservative">Bảo thủ</option>
+  <option value="nazi">Đức quốc xã</option>
+  </select>
+
+      <label for="politics">Trình độ học vấn Đã hoàn thành:</label>
+      <select id="dropdown2">
+  <option value="University">Đại học</option>
+  <option value="College">Cao đẳng</option>
+  <option value="Secondary">Trung học</option>  
+  <option value="None">Hổng cóa^^</option>
+  </select>
+    </div>
+  </fieldset>
+
+  <!-- --------------------Text Areas------------------------------ -->
+  
+  <fieldset>
+    <legend>Phần viết luận</legend>
+    <div>
+      <label for="msg"></label>
+      <p> Trong 50 từ trở lên, hãy giải thích lý do tại sao bạn muốn hẹn hò với con gái tôi</p>
+      <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Nhập văn bản vào đây"></textarea>   </div>
+    <div>
+      <label for="msg">Vui lòng tải lên chi tiết liên hệ để có 2 tài liệu tham khảo</label><br>
+      <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Nhập văn bản vào đây"></textarea>   </div>
+    <p>Tải lên Giấy chứng nhận đủ điều kiện của Cảnh sát, Sao kê Ngân hàng và Giấy chứng nhận Y tế tại đây:
+      <button>Đính kèm tệp</button></p>
+  </fieldset>
+
+  <div id="submitbutton">
+    <button type="submit" id="submit">Gửi đơn đăng ký của bạn</button>   </div>
+
+</form>
+  </div>
+
+<!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation -->
